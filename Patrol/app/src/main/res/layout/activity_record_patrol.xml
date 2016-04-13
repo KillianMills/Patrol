@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecordPatrol"
+    android:weightSum="1">
+
+    <Chronometer
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="0dp"
+        android:id="@+id/chronometerTimer"
+        android:layout_weight="1.0"
+        android:typeface="serif"
+        android:textSize="120sp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="102dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:background="@drawable/cyan_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="@string/StartRecord"
+            android:id="@+id/StartRecord"
+            style="@style/button_text" />
+        ... />
+
+        <Button
+            android:background="@drawable/orange_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="@string/StopRecord"
+            android:id="@+id/StopRecord"
+            style="@style/button_text"/>
+
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/green_button"
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:text="@string/Send"
+        android:id="@+id/SendRecord"
+        style="@style/button_text"/>
+    ... />
+
+
+</LinearLayout>

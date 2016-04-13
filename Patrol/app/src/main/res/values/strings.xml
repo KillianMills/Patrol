@@ -106,4 +106,13 @@
     </string>
     <string name="title_activity_about_patrol">AboutPatrol</string>
     <string name="title_activity_map_patrol">Map</string>
+    <string name="title_activity_record_patrol">RecordPatrol</string>
+    <string name="StopRecord">Stop</string>
+    <string name="StartRecord">Record</string>
+    <string name="send">send</string>
+    <string name="Send">Send</string>
+    <string name="GyroScope">GyroScope</string>
+    <string name="Accelerometer">Accelerometer</string>
+    <string name="AccelData" />
+    <string name="GyroData" />
 </resources>

@@ -35,13 +35,10 @@ public class StatsPatrol extends Activity implements SensorEventListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_patrol);
 
-        screenText = (TextView) findViewById(R.id.textView2);
-        screenText.setVisibility(View.GONE);
-
-        statsText = (TextView) findViewById(R.id.textView3);
+        statsText = (TextView) findViewById(R.id.AccelData);
         statsText.setVisibility(View.GONE);
 
-        gyroText = (TextView) findViewById(R.id.textView4);
+        gyroText = (TextView) findViewById(R.id.GyroData);
         gyroText.setVisibility(View.GONE);
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -50,6 +47,7 @@ public class StatsPatrol extends Activity implements SensorEventListener {
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
+        /*
         for (int i = 1; i < mList.size(); i++) {
             screenText.setVisibility(View.VISIBLE);
             if(mList.get(i).getName().equals("K330 Gyroscope sensor") || mList.get(i).getName().equals("Linear Acceleration Sensor")
@@ -58,6 +56,7 @@ public class StatsPatrol extends Activity implements SensorEventListener {
                 screenText.append("\n" + mList.get(i).getName() + "\n" + mList.get(i).getVendor() + "\n" + mList.get(i).getVersion() + "\n");
             }
         }
+        */
     }
 
     @Override
@@ -131,7 +130,7 @@ public class StatsPatrol extends Activity implements SensorEventListener {
             // rotationCurrent = rotationCurrent * deltaRotationMatrix;
 
             gyroText.setVisibility(View.VISIBLE);
-            gyroText.setText("GyroScope" + "\n" + deltaRotationVector[0] + "\n" + deltaRotationVector[1] + "\n" + deltaRotationVector[2] + "\n" + deltaRotationVector[3]);
+            gyroText.setText("\n" + deltaRotationVector[0] + "\n" + deltaRotationVector[1] + "\n" + deltaRotationVector[2] + "\n" + deltaRotationVector[3]);
         }
 
         else if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -153,10 +152,8 @@ public class StatsPatrol extends Activity implements SensorEventListener {
             linear_acceleration[2] = event.values[2] - gravity[2];
 
             statsText.setVisibility(View.VISIBLE);
-            statsText.setText("Acceleration" + "\n" + linear_acceleration[0] + "\n" + linear_acceleration[1] + "\n" + linear_acceleration[2]);
+            statsText.setText("\n" +"X: "+ linear_acceleration[0] + "\n" +"Y: "+ linear_acceleration[1] + "\n" +"Z: "+ linear_acceleration[2]);
 
         }
-
     }
-
 }
