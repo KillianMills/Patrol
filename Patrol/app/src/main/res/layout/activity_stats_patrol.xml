@@ -7,6 +7,7 @@
 
     <TextView
         android:text="@string/Accelerometer"
+        android:textColor="#34495e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/accelerometerHead"
@@ -16,6 +17,7 @@
 
     <TextView
         android:text="@string/GyroScope"
+        android:textColor="#34495e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gyroscopeHead"
@@ -25,6 +27,7 @@
 
     <TextView
         android:typeface="serif"
+        android:textColor="#34495e"
         android:textSize="30sp"
         android:paddingLeft="70sp"
         android:gravity="center_horizontal"
@@ -38,6 +41,7 @@
 
     <TextView
         android:typeface="serif"
+        android:textColor="#34495e"
         android:textSize="30sp"
         android:paddingLeft="70sp"
         android:gravity="center_horizontal"

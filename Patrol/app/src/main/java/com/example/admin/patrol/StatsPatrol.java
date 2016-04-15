@@ -47,22 +47,6 @@ public class StatsPatrol extends Activity implements SensorEventListener {
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
-        /*
-        for (int i = 1; i < mList.size(); i++) {
-            screenText.setVisibility(View.VISIBLE);
-            if(mList.get(i).getName().equals("K330 Gyroscope sensor") || mList.get(i).getName().equals("Linear Acceleration Sensor")
-                    || mList.get(i).getName().equals("Screen Orientation Sensor") || mList.get(i).getName().equals("Rotation Vector Sensor")
-                    || mList.get(i).getName().equals("YAS532 Magnetic Sensor") || mList.get(i).getName().equals("SAMSUNG Significant Motion Sensor")){
-                screenText.append("\n" + mList.get(i).getName() + "\n" + mList.get(i).getVendor() + "\n" + mList.get(i).getVersion() + "\n");
-            }
-        }
-        */
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        // Do something here if sensor accuracy changes.
-        // You must implement this callback in your code.
     }
 
     @Override
@@ -76,6 +60,12 @@ public class StatsPatrol extends Activity implements SensorEventListener {
     protected void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // Do something here if sensor accuracy changes.
+        // You must implement this callback in your code.
     }
 
     @Override

@@ -48,7 +48,7 @@
 
         <Button
             android:layout_weight="1"
-            android:background="@drawable/yellow_button"
+            android:background="@drawable/green_button"
             android:id="@+id/email_sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="0dp"
